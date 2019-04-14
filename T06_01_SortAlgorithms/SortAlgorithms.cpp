@@ -2,7 +2,16 @@
 
 using namespace std;
 
-bool Bubble_Sort(int* array, int length)
+//交换函数
+void swap(int *a, int *b)
+{
+    int tmp = *a;
+    *a = *b;
+    *b = tmp;
+}
+
+//冒泡排序
+bool Bubble_Sort(int array[], int length)
 {
     if (length <= 1)
         return false;
@@ -28,19 +37,20 @@ bool Bubble_Sort(int* array, int length)
     return true;
 }
 
-bool Insertion_Sort(int* array, int length)
+//插入排序
+bool Insertion_Sort(int array[], int length)
 {
     if (length <= 1)
         return false;
     for (int i = 1; i < length; i++)
     {
-        int value = array[i];
+        int value = array[i];  //保存需要插入的数字
         int j = i - 1;
         for (; j >=0; j--)
         {
             if (array[j] > value)
             {
-                array[j + 1] = array[j];
+                array[j + 1] = array[j];  //进行数据搬移，直到找到数字插入的位置
             }
             else
             {
@@ -53,10 +63,15 @@ bool Insertion_Sort(int* array, int length)
     return true;
 }
 
-bool Selection_Sort(int* array, int length)
+//选择排序
+bool Selection_Sort(int array[], int length)
 {
+    if (length <= 1)
+        return;
+
     for (int i = 0; i < length; i++) 
-    { // position
+    { 
+        //先找到未排序区间的最小值索引
         int min = i;
         for (int j = i + 1; j < length; j++) 
         {
@@ -138,13 +153,6 @@ bool Merge_Sort(int array[], int left, int right)
 }
 
 //快速排序
-void swap(int *a, int *b)
-{
-    int tmp = *a;
-    *a = *b;
-    *b = tmp;
-}
-
 int partition(int *arr, int p, int r)
 {
     //int pivot = arr[r];
@@ -196,9 +204,25 @@ void test1()
     print(array, length);
 }
 
+void test2()
+{
+    int array[10] = { 1, 3, 6, 2, 4, 9, 5, 8, 7, 0 };
+    int length = sizeof(array) / sizeof(int);
+    Insertion_Sort(array, length);
+    print(array, length);
+}
+
+void test3()
+{
+    int array[10] = { 1, 3, 6, 2, 4, 9, 5, 8, 7, 0 };
+    int length = sizeof(array) / sizeof(int);
+    Selection_Sort(array, length);
+    print(array, length);
+}
+
 int main(int argc, char** argv)
 {
-    test1();
+    test3();
     getchar();
     return 0;
 }
