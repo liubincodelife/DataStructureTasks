@@ -67,7 +67,7 @@ bool Insertion_Sort(int array[], int length)
 bool Selection_Sort(int array[], int length)
 {
     if (length <= 1)
-        return;
+        return false;
 
     for (int i = 0; i < length; i++) 
     { 
@@ -153,38 +153,38 @@ bool Merge_Sort(int array[], int left, int right)
 }
 
 //¿ìËÙÅÅÐò
-int partition(int *arr, int p, int r)
+int partition(int arr[], int p, int r)
 {
-    //int pivot = arr[r];
-    int i, j;
-
-    i = j = p;
-
-    for (; j < r; j++) {
-        if (arr[j] < arr[r]) {
-            if (i != j)
-            {
-                swap(arr + i, arr + j);
-
-            }
+    int pivot = arr[r];
+    int i = p;
+    for (int j = p; j < r; j++) 
+    {
+        if (arr[j] < pivot)
+        {
+            swap(arr + i, arr + j);
             i++;
         }
     }
 
     swap(arr + i, arr + r);
+
     return i;
 }
 
-void Quick_Sort(int *arr, int p, int r)
-{
-    int q;
 
+void Quick_Sort_Inner(int arr[], int p, int r)
+{
     if (p >= r)
         return;
 
-    q = partition(arr, p, r);
-    Quick_Sort(arr, p, q - 1);
-    Quick_Sort(arr, q + 1, r);
+    int q = partition(arr, p, r);
+    Quick_Sort_Inner(arr, p, q - 1);
+    Quick_Sort_Inner(arr, q + 1, r);
+}
+
+void Quick_Sort(int arr[], int length)
+{
+    Quick_Sort_Inner(arr, 0, length - 1);
 }
 
 void print(int* array, int length)
@@ -194,6 +194,7 @@ void print(int* array, int length)
     {
         cout << array[i] << " ";
     }
+    cout << endl;
 }
 
 void test1()
@@ -220,9 +221,19 @@ void test3()
     print(array, length);
 }
 
+void test4()
+{
+    //int array[10] = { 1, 3, 6, 2, 4, 9, 5, 8, 7, 0 };
+    int array[9] = { 1, 2, 3, 4, 5, 6, 7, 8, 9};
+    int length = sizeof(array) / sizeof(int);
+    Quick_Sort(array, length);
+    print(array, length);
+}
+
 int main(int argc, char** argv)
 {
     test3();
+    test4();
     getchar();
     return 0;
 }
