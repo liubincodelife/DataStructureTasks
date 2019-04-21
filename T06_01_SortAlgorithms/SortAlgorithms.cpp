@@ -11,6 +11,9 @@ void swap(int *a, int *b)
 }
 
 //冒泡排序
+//时间复杂度：最好：O(n) 最差：O(n^2)
+//空间复杂度：O(1)
+
 bool Bubble_Sort(int array[], int length)
 {
     if (length <= 1)
@@ -38,6 +41,9 @@ bool Bubble_Sort(int array[], int length)
 }
 
 //插入排序
+//时间复杂度：O(n^2)
+//空间复杂度：O(1)
+
 bool Insertion_Sort(int array[], int length)
 {
     if (length <= 1)
@@ -64,6 +70,9 @@ bool Insertion_Sort(int array[], int length)
 }
 
 //选择排序
+//时间复杂度：O(n^2)
+//空间复杂度：O(1)
+
 bool Selection_Sort(int array[], int length)
 {
     if (length <= 1)
@@ -89,6 +98,9 @@ bool Selection_Sort(int array[], int length)
 }
 
 //归并排序
+//时间复杂度：O(nlogn)
+//空间复杂度：O(n)
+
 void Merge(int a[], int left, int mid, int right)
 {
     //两段区间的长度
@@ -139,55 +151,58 @@ void Merge(int a[], int left, int mid, int right)
     delete[]l2;
 }
 
-bool Merge_Sort(int array[], int left, int right)
+bool Merge_Sort(int array[], int low, int high)
 {
-    if (left < right)
+    if (low < high)
     {
-        int mid = (left + right) / 2;     //首先进行分区，然后递归操作
-        Merge_Sort(array, left, mid);
-        Merge_Sort(array, mid + 1, right);//第一次将其分为两个区间，进行合并操作
-        Merge(array, left, mid, right);
+        int mid = (low + high) / 2;     //首先进行分区，然后递归操作
+        Merge_Sort(array, low, mid);
+        Merge_Sort(array, mid + 1, high);//第一次将其分为两个区间，进行合并操作
+        Merge(array, low, mid, high);
     }
 
     return true;
 }
 
 //快速排序
-int partition(int arr[], int p, int r)
+//时间复杂度：最好：O(nlogn) 最差：O(n^2)
+//空间复杂度：O(1)
+
+int partition(int array[], int low, int high)
 {
-    int pivot = arr[r];
-    int i = p;
-    for (int j = p; j < r; j++) 
+    int pivot = array[high];
+    int i = low;
+    for (int j = low; j < high; j++)
     {
-        if (arr[j] < pivot)
+        if (array[j] < pivot)
         {
-            swap(arr + i, arr + j);
+            swap(array + i, array + j);
             i++;
         }
     }
 
-    swap(arr + i, arr + r);
+    swap(array + i, array + high);
 
     return i;
 }
 
 
-void Quick_Sort_Inner(int arr[], int p, int r)
+void Quick_Sort(int array[], int low, int high)
 {
-    if (p >= r)
+    if (low >= high)
         return;
 
-    int q = partition(arr, p, r);
-    Quick_Sort_Inner(arr, p, q - 1);
-    Quick_Sort_Inner(arr, q + 1, r);
+    int mid = partition(array, low, high);
+    Quick_Sort(array, low, mid - 1);
+    Quick_Sort(array, mid + 1, high);
 }
 
-void Quick_Sort(int arr[], int length)
+void Quick_Sort(int array[], int length)
 {
-    Quick_Sort_Inner(arr, 0, length - 1);
+    Quick_Sort(array, 0, length - 1);
 }
 
-void print(int* array, int length)
+void print(int array[], int length)
 {
     cout << "the array after sorted is: " <<endl;
     for (int i = 0; i < length; i++)
@@ -199,6 +214,7 @@ void print(int* array, int length)
 
 void test1()
 {
+    cout << "test1 Bubble sorted running......" << endl;
     int array[10] = { 1, 3, 6, 2, 4, 9, 5, 8, 7, 0 };
     int length = sizeof(array) / sizeof(int);
     Bubble_Sort(array, length);
@@ -207,6 +223,7 @@ void test1()
 
 void test2()
 {
+    cout << "test2 Insertion sorted running......" << endl;
     int array[10] = { 1, 3, 6, 2, 4, 9, 5, 8, 7, 0 };
     int length = sizeof(array) / sizeof(int);
     Insertion_Sort(array, length);
@@ -215,6 +232,7 @@ void test2()
 
 void test3()
 {
+    cout << "test3 Selection sorted running......" << endl;
     int array[10] = { 1, 3, 6, 2, 4, 9, 5, 8, 7, 0 };
     int length = sizeof(array) / sizeof(int);
     Selection_Sort(array, length);
@@ -223,8 +241,9 @@ void test3()
 
 void test4()
 {
-    //int array[10] = { 1, 3, 6, 2, 4, 9, 5, 8, 7, 0 };
-    int array[9] = { 1, 2, 3, 4, 5, 6, 7, 8, 9};
+    cout << "test4 Quick sorted running......" << endl;
+    int array[10] = { 1, 3, 6, 2, 4, 9, 5, 8, 7, 0 };
+    //int array[9] = { 1, 2, 3, 4, 5, 6, 7, 8, 9};
     int length = sizeof(array) / sizeof(int);
     Quick_Sort(array, length);
     print(array, length);
