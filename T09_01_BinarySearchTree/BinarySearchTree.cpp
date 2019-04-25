@@ -7,7 +7,7 @@ struct TreeNode
     int m_nValue;
     TreeNode* m_pLeft;
     TreeNode* m_pRight;
-    TreeNode(int data) : m_nValue(data), m_pLeft(nullptr), m_pRight(nullptr) {}; //构造函数
+    TreeNode(int data=0) : m_nValue(data), m_pLeft(nullptr), m_pRight(nullptr) {}; //构造函数
 };
 
 class BinarySearchTree
