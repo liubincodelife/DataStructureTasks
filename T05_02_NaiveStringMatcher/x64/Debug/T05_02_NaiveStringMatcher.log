@@ -1,7 +1,1 @@
-﻿  NaiveStringMatcher.cpp
-e:\workspaces\cpp\datastructuretasks\t05_02_naivestringmatcher\naivestringmatcher.cpp(9): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
-e:\workspaces\cpp\datastructuretasks\t05_02_naivestringmatcher\naivestringmatcher.cpp(10): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
-e:\workspaces\cpp\datastructuretasks\t05_02_naivestringmatcher\naivestringmatcher.cpp(36): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
-e:\workspaces\cpp\datastructuretasks\t05_02_naivestringmatcher\naivestringmatcher.cpp(37): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
-  T05_02_NaiveStringMatcher.vcxproj -> E:\Workspaces\Cpp\DataStructureTasks\x64\Debug\T05_02_NaiveStringMatcher.exe
-  T05_02_NaiveStringMatcher.vcxproj -> E:\Workspaces\Cpp\DataStructureTasks\x64\Debug\T05_02_NaiveStringMatcher.pdb (Partial PDB)
+﻿
