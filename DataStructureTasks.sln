@@ -57,6 +57,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "T09_02_TraversingBinaryTree
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "T10_01_Heap", "T10_01_Heap\T10_01_Heap.vcxproj", "{13749D03-E167-4EA8-849F-769960EF4636}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "T10_02_HeapSort", "T10_02_HeapSort\T10_02_HeapSort.vcxproj", "{E568FC81-ABC6-434E-A565-1C9F3116C86B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -281,6 +283,14 @@ Global
 		{13749D03-E167-4EA8-849F-769960EF4636}.Release|x64.Build.0 = Release|x64
 		{13749D03-E167-4EA8-849F-769960EF4636}.Release|x86.ActiveCfg = Release|Win32
 		{13749D03-E167-4EA8-849F-769960EF4636}.Release|x86.Build.0 = Release|Win32
+		{E568FC81-ABC6-434E-A565-1C9F3116C86B}.Debug|x64.ActiveCfg = Debug|x64
+		{E568FC81-ABC6-434E-A565-1C9F3116C86B}.Debug|x64.Build.0 = Debug|x64
+		{E568FC81-ABC6-434E-A565-1C9F3116C86B}.Debug|x86.ActiveCfg = Debug|Win32
+		{E568FC81-ABC6-434E-A565-1C9F3116C86B}.Debug|x86.Build.0 = Debug|Win32
+		{E568FC81-ABC6-434E-A565-1C9F3116C86B}.Release|x64.ActiveCfg = Release|x64
+		{E568FC81-ABC6-434E-A565-1C9F3116C86B}.Release|x64.Build.0 = Release|x64
+		{E568FC81-ABC6-434E-A565-1C9F3116C86B}.Release|x86.ActiveCfg = Release|Win32
+		{E568FC81-ABC6-434E-A565-1C9F3116C86B}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
