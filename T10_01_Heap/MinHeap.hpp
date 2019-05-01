@@ -41,9 +41,9 @@ void MinHeap::insert(int data)
     }
     array[++count] = data;
     int i = count;
-    while (array[i / 2] > 0 && array[i] < array[i / 2])
+    while ((i / 2) > 0 && array[i] < array[i/2])
     {
-        swap(&array[i], &array[i / 2]);
+        swap(&array[i], &array[i/2]);
         i = i / 2;
     }
 }

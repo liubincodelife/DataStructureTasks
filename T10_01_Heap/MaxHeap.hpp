@@ -20,7 +20,7 @@ private:
     int count;
 };
 
-MaxHeap::MaxHeap(int capacity) :size(capacity), count(0)
+MaxHeap::MaxHeap(int capacity):size(capacity), count(0)
 {
     array = new int[capacity + 1]();
 }
@@ -41,9 +41,9 @@ void MaxHeap::insert(int data)
     }
     array[++count] = data;
     int i = count;
-    while (array[i/2] > 0 && array[i] > array[i/2])
+    while ((i / 2) > 0 && array[i] > array[i/2])
     {
-        swap(&array[i], &array[i / 2]);
+        swap(&array[i], &array[i/2]);
         i = i / 2;
     }
 }

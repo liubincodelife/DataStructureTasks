@@ -59,6 +59,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "T10_01_Heap", "T10_01_Heap\
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "T10_02_HeapSort", "T10_02_HeapSort\T10_02_HeapSort.vcxproj", "{E568FC81-ABC6-434E-A565-1C9F3116C86B}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "T10_03_PriorityQueue", "T10_03_PriorityQueue\T10_03_PriorityQueue.vcxproj", "{5E07A6B3-E1F7-42E4-BFAA-B9E54A59AC9C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -291,6 +293,14 @@ Global
 		{E568FC81-ABC6-434E-A565-1C9F3116C86B}.Release|x64.Build.0 = Release|x64
 		{E568FC81-ABC6-434E-A565-1C9F3116C86B}.Release|x86.ActiveCfg = Release|Win32
 		{E568FC81-ABC6-434E-A565-1C9F3116C86B}.Release|x86.Build.0 = Release|Win32
+		{5E07A6B3-E1F7-42E4-BFAA-B9E54A59AC9C}.Debug|x64.ActiveCfg = Debug|x64
+		{5E07A6B3-E1F7-42E4-BFAA-B9E54A59AC9C}.Debug|x64.Build.0 = Debug|x64
+		{5E07A6B3-E1F7-42E4-BFAA-B9E54A59AC9C}.Debug|x86.ActiveCfg = Debug|Win32
+		{5E07A6B3-E1F7-42E4-BFAA-B9E54A59AC9C}.Debug|x86.Build.0 = Debug|Win32
+		{5E07A6B3-E1F7-42E4-BFAA-B9E54A59AC9C}.Release|x64.ActiveCfg = Release|x64
+		{5E07A6B3-E1F7-42E4-BFAA-B9E54A59AC9C}.Release|x64.Build.0 = Release|x64
+		{5E07A6B3-E1F7-42E4-BFAA-B9E54A59AC9C}.Release|x86.ActiveCfg = Release|Win32
+		{5E07A6B3-E1F7-42E4-BFAA-B9E54A59AC9C}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
