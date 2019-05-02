@@ -35,10 +35,11 @@ MinHeap::~MinHeap()
 
 void MinHeap::insert(int data)
 {
-    if (count >= size)
+    if (count == size)
     {
         return;
     }
+
     array[++count] = data;
     int i = count;
     while ((i / 2) > 0 && array[i] < array[i/2])
@@ -95,7 +96,7 @@ void MinHeap::swap(int* a, int* b)
 
 void MinHeap::print()
 {
-    for (int i = 0; i <= count; i++)
+    for (int i = 1; i <= count; i++)
     {
         std::cout << array[i] << "  ";
     }
