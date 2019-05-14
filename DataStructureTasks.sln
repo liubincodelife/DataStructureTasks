@@ -79,6 +79,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "T14_03_LevenshteinDistance"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "T14_04_LongestCommonSubstring", "T14_04_LongestCommonSubstring\T14_04_LongestCommonSubstring.vcxproj", "{47B37480-ACCD-433D-9F66-D4158FAC0E17}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "T14_02_MinimumPathSum", "T14_02_MinimumPathSum\T14_02_MinimumPathSum.vcxproj", "{65EA9A59-D395-4678-BC74-EEF669ECE04C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -391,6 +393,14 @@ Global
 		{47B37480-ACCD-433D-9F66-D4158FAC0E17}.Release|x64.Build.0 = Release|x64
 		{47B37480-ACCD-433D-9F66-D4158FAC0E17}.Release|x86.ActiveCfg = Release|Win32
 		{47B37480-ACCD-433D-9F66-D4158FAC0E17}.Release|x86.Build.0 = Release|Win32
+		{65EA9A59-D395-4678-BC74-EEF669ECE04C}.Debug|x64.ActiveCfg = Debug|x64
+		{65EA9A59-D395-4678-BC74-EEF669ECE04C}.Debug|x64.Build.0 = Debug|x64
+		{65EA9A59-D395-4678-BC74-EEF669ECE04C}.Debug|x86.ActiveCfg = Debug|Win32
+		{65EA9A59-D395-4678-BC74-EEF669ECE04C}.Debug|x86.Build.0 = Debug|Win32
+		{65EA9A59-D395-4678-BC74-EEF669ECE04C}.Release|x64.ActiveCfg = Release|x64
+		{65EA9A59-D395-4678-BC74-EEF669ECE04C}.Release|x64.Build.0 = Release|x64
+		{65EA9A59-D395-4678-BC74-EEF669ECE04C}.Release|x86.ActiveCfg = Release|Win32
+		{65EA9A59-D395-4678-BC74-EEF669ECE04C}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
